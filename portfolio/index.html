@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arav Gupta - Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Circular+Std:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="currentAudio" preload="metadata"></audio>
+        
+        <div class="player-content">
+            <!-- Song Info -->
+            <div class="song-info">
+                <div class="song-cover">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="song-details">
+                    <div class="song-title">Select a song</div>
+                    <div class="song-artist">Unknown Artist</div>
+                </div>
+            </div>
+            
+            <!-- Player Controls -->
+            <div class="player-controls">
+                <button id="prevBtn" class="control-btn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button id="playPauseBtn" class="control-btn play-btn" title="Play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="nextBtn" class="control-btn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span class="time-current">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                    <div class="progress-handle"></div>
+                </div>
+                <span class="time-total">0:00</span>
+            </div>
+            
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <button id="volumeBtn" class="control-btn" title="Volume">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider">
+                    <input type="range" id="volumeRange" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>AravDev</span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search skills, projects, experience...">
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button class="premium-btn">Hire Me</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>My Profile</h3>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h4>Arav Gupta</h4>
+                        <p>CS & AI/ML Student</p>
+                        <div class="profile-stats">
+                            <span>CGPA: 8.3/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Quick Links</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                    <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+                    <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Contact Info</h3>
+                <div class="contact-links">
+                    <a href="mailto:aravgupta2604@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="tel:7905421319"><i class="fas fa-phone"></i> Phone</a>
+                    <a href="https://linkedin.com/in/aravgupta26" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/aravvv" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Hello, I'm <span class="highlight">Arav Gupta</span></h1>
+                    <p class="hero-subtitle">Computer Science & AI/ML Student | Python Developer | Machine Learning Enthusiast</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Major Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <div class="section-header">
+                    <h2>My Tech Stack</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming & Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLMs</span>
+                            <span class="skill-tag">Agentic AI</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="content-section">
+                <div class="section-header">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Graphic Lead (Intern)</h3>
+                            <p class="company">TelioEV • Bengaluru, India</p>
+                            <p class="duration">Jan 2025 - Jul 2025</p>
+                            <p class="description">Led a design team of 5 interns, created and oversaw the creation of crucial assets, improving campaign engagement by 35%.</p>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Machine Learning Intern</h3>
+                            <p class="company">Futurense Technologies • Bengaluru, India</p>
+                            <p class="duration">Apr 2024 - Jun 2024</p>
+                            <p class="description">Developed ML models for predictive analytics, increasing forecast accuracy by 18%. Preprocessed and analyzed large datasets using Pandas and NumPy.</p>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Python Developer (Intern)</h3>
+                            <p class="company">Rivan Solutions • Bengaluru, India</p>
+                            <p class="duration">Dec 2022 - Feb 2023</p>
+                            <p class="description">Built Python APIs improving data flow efficiency by 40%. Automated 60% of workflows and processed 500K+ data points, increasing analytic accuracy by 50%.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Vision-Based Inventory Management System</h3>
+                            <p class="project-tech">Computer Vision • OpenCV • Python</p>
+                            <p class="project-description">Advanced inventory management using computer vision technology</p>
+                            <a href="#" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Book Downloader Automation</h3>
+                            <p class="project-tech">Automation • Python • Web Scraping</p>
+                            <p class="project-description">Automated system for downloading and organizing e-books</p>
+                            <a href="#" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Text-to-Speech Converter</h3>
+                            <p class="project-tech">NLP • Python • Audio Processing</p>
+                            <p class="project-description">Convert text to natural-sounding speech with multiple voice options</p>
+                            <a href="#" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="content-section">
+                <div class="section-header">
+                    <h2>Education</h2>
+                </div>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-year">2022-2026</div>
+                        <div class="education-content">
+                            <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                            <p class="education-specialization">Specialization in AI/ML</p>
+                            <p class="education-school">Jain University, Bengaluru, India</p>
+                            <p class="education-grade">Current CGPA: 8.3/10</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2021-2022</div>
+                        <div class="education-content">
+                            <h3>Senior Secondary (12th Grade)</h3>
+                            <p class="education-school">New Delhi Convent Senior Secondary School, New Delhi</p>
+                            <p class="education-grade">Percentage: 73%</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2020-2021</div>
+                        <div class="education-content">
+                            <h3>Secondary (10th Grade)</h3>
+                            <p class="education-school">Birla Vidya Mandir, Nainital</p>
+                            <p class="education-grade">Percentage: 92%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications" class="content-section">
+                <div class="section-header">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Regression & Forecasting for Data Scientists using Python</h3>
+                            <a href="#" class="cert-link">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Python Programming Essentials</h3>
+                            <a href="#" class="cert-link">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Market Research and Consumer Behavior</h3>
+                            <a href="#" class="cert-link">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
